@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SunPeak Solar — Inverter & Solar Installation in Abuja | Free Site Survey</title>
+<meta name="description" content="SunPeak Solar designs and installs inverter and solar systems for homes and offices in Abuja. Fixed-price packages, 18-month workmanship warranty, free site survey.">
+<meta property="og:title" content="SunPeak Solar — Power that stays on. Abuja.">
+<meta property="og:description" content="Inverter & solar installation with fixed-price packages and a free site survey.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#0F2540;      /* deep panel blue */
+    --sky:#1B4B7A;
+    --sun:#F5A623;        /* amber */
+    --sun-deep:#D98C0F;
+    --day:#F6F8FB;
+    --line:#DCE4EE;
+    --slate:#51617A;
+    --r:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;background:var(--day);color:var(--night);line-height:1.6}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:'Sora',sans-serif;letter-spacing:-.015em;line-height:1.12}
+
+  header{position:sticky;top:0;z-index:40;background:rgba(246,248,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{font-family:'Sora';font-weight:800;font-size:1.25rem;color:var(--night);text-decoration:none;display:flex;align-items:center;gap:.45rem}
+  .logo::before{content:"";width:18px;height:18px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFD066,var(--sun) 70%)}
+  nav.links{display:flex;gap:1.5rem;font-size:.92rem}
+  nav.links a{color:var(--slate);text-decoration:none;font-weight:600}
+  nav.links a:hover{color:var(--night)}
+  .btn{display:inline-block;background:var(--sun);color:var(--night);font-weight:700;text-decoration:none;padding:.72rem 1.5rem;border-radius:999px;border:0;cursor:pointer;font-size:.95rem;font-family:inherit;transition:background .2s,transform .15s}
+  .btn:hover{background:var(--sun-deep)}
+  .btn:active{transform:scale(.97)}
+  .btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--night)}
+  .btn.ghost:hover{border-color:var(--night);background:transparent}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--night) 0%,var(--sky) 100%);color:#fff;padding:92px 0 84px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle at 35% 35%,#FFD066,var(--sun) 60%,transparent 72%);opacity:.9;filter:blur(2px)}
+  .hero .wrap{position:relative;z-index:1;max-width:720px;margin-left:calc((100% - 1120px)/2 + 24px)}
+  .hero .tag{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);margin-bottom:1.1rem}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,3.8rem);font-weight:800}
+  .hero p{font-size:1.12rem;color:#C9D8EA;margin:1.2rem 0 2rem;max-width:34rem}
+  .hero .cta-row{display:flex;gap:.8rem;flex-wrap:wrap}
+  .hero .proof{display:flex;gap:2.2rem;margin-top:2.6rem;flex-wrap:wrap}
+  .hero .proof div strong{font-family:'Sora';font-size:1.5rem;display:block;color:#fff}
+  .hero .proof div span{font-size:.85rem;color:#9FB6CE}
+
+  section{padding:76px 0}
+  .sec-eyebrow{font-size:.76rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sun-deep);display:block;margin-bottom:.7rem}
+  .sec-title{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:800;margin-bottom:.7rem}
+  .sec-sub{color:var(--slate);max-width:40rem;margin-bottom:2.4rem}
+
+  /* Packages */
+  .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+  .pack{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:1.8rem;display:flex;flex-direction:column}
+  .pack.featured{border-color:var(--sun);box-shadow:0 14px 36px rgba(15,37,64,.1);position:relative}
+  .pack.featured::before{content:"Most installed";position:absolute;top:-12px;left:1.4rem;background:var(--sun);color:var(--night);font-size:.72rem;font-weight:700;padding:.2rem .7rem;border-radius:999px}
+  .pack h3{font-size:1.15rem}
+  .pack .load{font-size:.85rem;color:var(--slate);margin:.2rem 0 1rem}
+  .pack .price{font-family:'Sora';font-weight:800;font-size:1.6rem;margin-bottom:1.1rem}
+  .pack .price small{font-size:.8rem;font-weight:600;color:var(--slate)}
+  .pack ul{list-style:none;font-size:.92rem;color:var(--slate);flex:1}
+  .pack li{padding:.34rem 0 .34rem 1.5rem;position:relative}
+  .pack li::before{content:"✓";position:absolute;left:0;color:var(--sun-deep);font-weight:700}
+  .pack .btn{margin-top:1.4rem;text-align:center}
+
+  /* Process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;counter-reset:step}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.5rem;counter-increment:step}
+  .step::before{content:"Step " counter(step);font-family:'Sora';font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sun-deep)}
+  .step h3{font-size:1rem;margin:.6rem 0 .4rem}
+  .step p{font-size:.88rem;color:var(--slate)}
+
+  /* Quote form */
+  .quote{background:var(--night);border-radius:calc(var(--r) + 6px);color:#fff;padding:3rem;display:grid;grid-template-columns:1fr 1.1fr;gap:2.6rem}
+  .quote h2{color:#fff}
+  .quote .sec-sub{color:#B7C8DC}
+  .quote form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .quote label{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9FB6CE;display:block;margin-bottom:.35rem}
+  .quote input,.quote select{width:100%;font:inherit;padding:.72rem .9rem;border-radius:10px;border:1.5px solid #2C4A6E;background:#FFFFFF;color:var(--night)}
+  .quote input:focus-visible,.quote select:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+  .quote .full{grid-column:1/-1}
+  .q-msg{margin-top:.9rem;font-weight:700;min-height:1.4em;font-size:.95rem}
+  .q-msg.ok{color:var(--sun)}
+  .q-msg.err{color:#FFAB9B}
+
+  footer{padding:2.4rem 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.88rem;color:var(--slate);border-top:1px solid var(--line)}
+
+  @media (max-width:960px){.hero .wrap{margin-left:auto}}
+  @media (max-width:860px){
+    nav.links{display:none}
+    .packs,.steps{grid-template-columns:1fr}
+    .quote{grid-template-columns:1fr;padding:2rem}
+    .quote form{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">SunPeak Solar</a>
+    <nav class="links" aria-label="Main">
+      <a href="#packages">Packages</a>
+      <a href="#process">How it works</a>
+      <a href="#quote">Get a quote</a>
+    </nav>
+    <a class="btn" href="#quote">Free site survey</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="tag">Inverter & solar installation · Abuja</span>
+      <h1>Power that stays on when NEPA doesn't.</h1>
+      <p>SunPeak designs and installs inverter and solar systems for homes and offices across Abuja — fixed-price packages, quality components, and an 18-month workmanship warranty.</p>
+      <div class="cta-row">
+        <a class="btn" href="#quote">Book a free site survey</a>
+        <a class="btn ghost" style="border-color:#3E5E84;color:#fff" href="#packages">See packages</a>
+      </div>
+      <div class="proof">
+        <div><strong>120+</strong><span>installations completed</span></div>
+        <div><strong>18 mo</strong><span>workmanship warranty</span></div>
+        <div><strong>48 hrs</strong><span>typical install time</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="packages">
+    <span class="sec-eyebrow">Fixed-price packages</span>
+    <h2 class="sec-title">Sized for how you actually use power.</h2>
+    <p class="sec-sub">Every package includes professional installation, protective wiring, and setup of your changeover. Prices confirmed after a free site survey — no hidden extras on install day.</p>
+    <div class="packs">
+      <div class="pack">
+        <h3>Essentials</h3>
+        <p class="load">1.5kVA · lights, fans, TV, router, phone charging</p>
+        <p class="price">From ₦850k <small>installed</small></p>
+        <ul>
+          <li>1.5kVA pure sine inverter</li>
+          <li>1 × 220Ah tubular battery</li>
+          <li>Changeover & protective wiring</li>
+          <li>Same-day installation</li>
+        </ul>
+        <a class="btn ghost" href="#quote">Request this package</a>
+      </div>
+      <div class="pack featured">
+        <h3>Family Home</h3>
+        <p class="load">3.5kVA hybrid · adds fridge, freezer, pumping machine</p>
+        <p class="price">From ₦2.4m <small>installed</small></p>
+        <ul>
+          <li>3.5kVA hybrid MPPT inverter</li>
+          <li>Lithium battery bank (LiFePO₄)</li>
+          <li>4 × 450W solar panels</li>
+          <li>Daytime running on solar</li>
+          <li>App monitoring setup</li>
+        </ul>
+        <a class="btn" href="#quote">Request this package</a>
+      </div>
+      <div class="pack">
+        <h3>Office / Duplex</h3>
+        <p class="load">5–10kVA · ACs, multiple offices, heavier loads</p>
+        <p class="price">Custom <small>after survey</small></p>
+        <ul>
+          <li>5–10kVA hybrid system design</li>
+          <li>Scalable battery bank</li>
+          <li>Panel array sized to roof & load</li>
+          <li>Load audit & phased install plan</li>
+        </ul>
+        <a class="btn ghost" href="#quote">Request a design</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="process">
+    <span class="sec-eyebrow">How it works</span>
+    <h2 class="sec-title">From survey to switch-on in four steps.</h2>
+    <div class="steps" style="margin-top:1.8rem">
+      <div class="step">
+        <h3>Free site survey</h3>
+        <p>We visit, measure your real load, and check wiring, roof space, and battery placement.</p>
+      </div>
+      <div class="step">
+        <h3>Fixed quote</h3>
+        <p>You get one written price covering equipment, materials, and labour. It doesn't change on install day.</p>
+      </div>
+      <div class="step">
+        <h3>Installation</h3>
+        <p>Certified installers complete most homes in 1–2 days, with clean cable runs and proper earthing.</p>
+      </div>
+      <div class="step">
+        <h3>Handover & warranty</h3>
+        <p>We walk you through the system, set up monitoring, and back the work with an 18-month warranty.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="quote" style="padding-bottom:96px">
+    <div class="quote">
+      <div>
+        <span class="sec-eyebrow" style="color:var(--sun)">Get a quote</span>
+        <h2 class="sec-title">Book your free site survey.</h2>
+        <p class="sec-sub">Tell us a little about your building and we'll call to schedule a visit — usually within one working day.</p>
+      </div>
+      <form id="quoteForm" novalidate>
+        <div>
+          <label for="qname">Name</label>
+          <input id="qname" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="qphone">Phone / WhatsApp</label>
+          <input id="qphone" name="phone" type="tel" autocomplete="tel" placeholder="0803 000 0000" required>
+        </div>
+        <div>
+          <label for="qarea">Area in Abuja</label>
+          <input id="qarea" name="area" type="text" placeholder="e.g. Gwarinpa">
+        </div>
+        <div>
+          <label for="qtype">Building type</label>
+          <select id="qtype" name="type">
+            <option>Flat / Apartment</option>
+            <option>Bungalow</option>
+            <option>Duplex</option>
+            <option>Office / Shop</option>
+          </select>
+        </div>
+        <div class="full">
+          <button class="btn" type="submit">Request survey call</button>
+          <p class="q-msg" id="qMsg" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 SunPeak Solar · Abuja, FCT</span>
+  <span>survey@sunpeaksolar.ng · 0906 000 0000</span>
+</footer>
+
+<script>
+  // Quote request — point at Formspree or your backend endpoint when live.
+  document.getElementById('quoteForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, msg = document.getElementById('qMsg');
+    if (!f.name.value.trim() || !/^\+?[\d\s-]{7,15}$/.test(f.phone.value.trim())) {
+      msg.textContent = 'Add your name and a valid phone number so we can reach you.';
+      msg.className = 'q-msg err';
+      return;
+    }
+    msg.textContent = 'Request received — expect our call within one working day.';
+    msg.className = 'q-msg ok';
+    f.reset();
+  });
+</script>
+</body>
+</html>
